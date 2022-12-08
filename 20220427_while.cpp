@@ -75,3 +75,33 @@ int main(){
     
     return 0;
 }
+//Rata-rata
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n, i;
+  float num[100], sum = 0.0, average;
+
+  cout << "Jumlah angka : ";
+  cin >> n;
+
+
+  while (n > 100 || n <= 0) {
+    cout << "Jumlah angka harus diantara 0-100" << endl;
+    cout << "Masukkan jumlah angka kembali";
+    cin >> n;
+  }
+
+
+  for (i = 0; i < n; ++i) {
+    cout << i + 1 << ". Masukkan angka : ";
+    cin >> num[i];
+    sum += num[i];
+  }
+    cout<<endl;
+  average = sum / n;
+
+  cout << "Rata-rata = " << average;
+  return 0;
+}
